@@ -1,0 +1,9 @@
+
+[MESSAGES CONTROL]
+
+# C0103: Module name "yamja-renderer" doesn't conform to snake_case naming style (invalid-name)
+# C0330: Wrong hanging indentation before block (add 4 spaces).
+
+disable=C0103,C0330
+
+# [EOF]
