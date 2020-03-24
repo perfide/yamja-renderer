@@ -25,6 +25,13 @@ Install `yamja-renderer` on your system using:
 pip install yamja-renderer
 ```
 
+### Docker
+
+```
+docker build --no-cache --tag yamja-renderer .
+docker run yamja-renderer --help
+```
+
 ## Usage
 
 Get basic usage info: `yamja-renderer --help`
