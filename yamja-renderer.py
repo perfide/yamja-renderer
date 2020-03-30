@@ -223,6 +223,9 @@ def read_yaml(yaml_path: str) -> dict:
         except yaml.scanner.ScannerError as err:
             msg = f'unable to scan {yaml_path}: """{err}"""'
             YamlReadFailed(msg)
+        except UnicodeDecodeError as err:
+            msg = f'unable to decode {yaml_path}: """{err}"""'
+            YamlReadFailed(msg)
     return variables
 
 
