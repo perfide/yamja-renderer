@@ -2,7 +2,15 @@
 [MESSAGES CONTROL]
 
 # C0103: Module name "yamja-renderer" doesn't conform to snake_case naming style (invalid-name)
+# Reason: unix-binaries use dashes instead of underscores
+
 # C0330: Wrong hanging indentation before block (add 4 spaces).
+# yapf (and back) are reformatting code in a good way (PEP-8 compatible)
+# It is just pylint which does not like the result.
+
+# R1711: Useless return at end of function or method (useless-return)
+# Every function should use the return statement
+# "Explicit is better than implicit."
 
 disable=C0103,C0330
 
