@@ -77,12 +77,14 @@ def render_one_file(
         tmpl = env.get_template(template_file_name)
     except jinja2.exceptions.TemplateSyntaxError as err:
         # expected token 'end of statement block', got '='
-        raise RendererFailed(f'Bad template: {err}')
+        raise RendererFailed(
+            f'jinja-syntax "{err.message}" at {err.lineno} in {err.filename}'
+        )
     try:
         rendered = tmpl.render(**variables)
     except jinja2.exceptions.UndefinedError as err:
         # 'dict object' has no attribute 'worker'
-        raise RendererFailed(f'Missing variable: {err}')
+        raise RendererFailed(f'undefined-variable {err}')
     os.makedirs(output_dir, exist_ok=True)
     output_path = os.path.join(output_dir, template_file_name)
     with open(output_path, 'w') as file_handler:
