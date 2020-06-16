@@ -1,7 +1,7 @@
 
 [style]
-based_on_style: facebook
-blank_line_before_module_docstring: true
+based_on_style = facebook
+blank_line_before_module_docstring = true
 
 # yapf with 79 sometimes uses 80
 # default=80
