@@ -12,6 +12,6 @@
 # Every function should use the return statement
 # "Explicit is better than implicit."
 
-disable=C0103,C0330
+disable=C0103,C0330,R1711
 
 # [EOF]
