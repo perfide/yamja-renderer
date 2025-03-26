@@ -1,3 +1,22 @@
+[project]
+name = "yamja-renderer"
+version = "0.1.0"
+description = "Jinja2 template renderer"
+authors = [
+    {name = "perfide",email = "perfide+github@zaubberer.net"},
+]
+license = {text = "GPL-2.0-only"}
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "jinja2 (>=3.1.6,<4.0.0)",
+    "pyyaml (>=6.0.2,<7.0.0)",
+]
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
 [tool.black]
 line-length = 79
 target-version = ['py37']
@@ -12,4 +31,13 @@ exclude = '''
 '''
 skip-string-normalization = true
 
-# [EOF]
+[tool.pdm]
+distribution = true
+
+[[tool.pdm.source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dependency-groups]
+dev = []
