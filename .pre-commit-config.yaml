@@ -4,32 +4,32 @@
 # See https://pre-commit.com/hooks.html for more hooks
 
 repos:
-- repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v2.4.0
+- repo: "https://github.com/pre-commit/pre-commit-hooks"
+  rev: "v5.0.0"
   hooks:
-  - id: check-yaml
-  - id: check-added-large-files
-  - id: check-merge-conflict
-  - id: end-of-file-fixer
-  - id: fix-encoding-pragma
-  - id: trailing-whitespace
+  - id: "check-yaml"
+  - id: "check-added-large-files"
+  - id: "check-merge-conflict"
+  - id: "end-of-file-fixer"
+  - id: "fix-encoding-pragma"
+  - id: "trailing-whitespace"
 
-- repo: https://github.com/pre-commit/mirrors-yapf
-  rev: v0.29.0
+- repo: "https://github.com/google/yapf"
+  rev: "v0.43.0"
   hooks:
-  - id: yapf
+  - id: "yapf"
 
-- repo: https://gitlab.com/pycqa/flake8
-  rev: 3.7.9
+- repo: "https://github.com/pycqa/flake8"
+  rev: "7.1.2"
   hooks:
-  - id: flake8
+  - id: "flake8"
 
-- repo: https://github.com/PyCQA/pylint
-  rev: pylint-2.4.4
+- repo: "https://github.com/PyCQA/pylint"
+  rev: "v3.3.6"
   hooks:
-  - id: pylint
+  - id: "pylint"
     additional_dependencies:
-    - jinja2
-    - pyyaml
+    - "jinja2"
+    - "pyyaml"
 
 ...
